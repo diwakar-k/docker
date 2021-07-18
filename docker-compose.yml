@@ -12,7 +12,14 @@ services:
   app:
     build: ./app
     ports: 
-      - "3000:3000" 
+      - "3000:4200" 
+    environment:
+      SEQ_DB: welcome_mmo
+      SEQ_USER: mmo
+      SEQ_PW: mmoChallenge
+      # PORT: 4242
+      # DATABASE_URL: postgres://username:pgpassword@127.0.0.1:5432/mydatabase
+      DATABASE_URL: "postgres://mmo:mmoChallenge@db:5432/mydatabase"
     depends_on: 
       - db
     restart: on-failure
