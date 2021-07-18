@@ -5,10 +5,10 @@ services:
   db:
     build: ./db
     environment:
-      IMMO_DB_HOST: db
-      IMMO_DB_USER: mmo
-      IMMO_DB_PASSWORD: mmoChallenge
-      IMMO_DB: welcome_mmo
+      POSTGRES_HOST: db
+      POSTGRES_USER: mmo
+      POSTGRES_PASSWORD: mmoChallenge
+      POSTGRES_DB: welcome_mmo
   app:
     build: ./app
     ports: 

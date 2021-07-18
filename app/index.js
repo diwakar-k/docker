@@ -8,10 +8,14 @@ const { Client } = require('pg');
 
 async function get_body() {
   const client = new Client({
-    'host': process.env.IMMO_DB_HOST,
-    'user': process.env.IMMO_DB_USER,
-    'password': process.env.IMMO_DB_PASSWORD,
-    'database': process.env.IMMO_DB,
+    // 'host': process.env.IMMO_DB_HOST,
+    // 'user': process.env.IMMO_DB_USER,
+    // 'password': process.env.IMMO_DB_PASSWORD,
+    // 'database': process.env.IMMO_DB,
+    'host': db,
+    'user': mmo,
+    'password': mmochalleng ,
+    'database':welcome_mmo ,
     'port': 5432,
     'max': 3,
     'idleTimeoutMillis': 30000,
