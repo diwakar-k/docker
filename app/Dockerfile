@@ -2,15 +2,14 @@ FROM node:12.22-alpine
  
 
 
-WORKDIR /home/app/
+WORKDIR /usr/src/app
 
-COPY package.json /home/app/
-
+COPY package*.json ./
 
 RUN npm install
 
 
-COPY . /home/app
+COPY . .
 
 EXPOSE 3000
 
